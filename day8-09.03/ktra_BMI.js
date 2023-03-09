@@ -16,5 +16,3 @@ function kiemtra() {
             '<img src="734d11cc677595ce3c3e5e3bba02721f.gif" height="93" width="45"/>'
     }
 }
-
-}
