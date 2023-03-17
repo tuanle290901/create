@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let length = prompt(" Nhập độ dài mảng")
+    let arr = new Array(Number(length))
+    for (let i = 0; i < arr.length; i++) {
+        let value = prompt(" NHập giá trị phân cách bằng khoảng trống!")
+        arr[i] = value.split(" ")
+    }
+    console.log(arr)
+</script>
+</html>

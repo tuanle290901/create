@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    //Bài 1
+    // let myColor = [ "Red", " Green", "White", " Black"]
+    // console.log(myColor.join(','))
+
+    // //Bài 2
+    // let arr = new Array(+prompt(" nhập độ dài mẩng"))
+    // let total = 0
+    //
+    // for (let i = 0; i < arr.length; i++) {
+    //     arr [i] = +prompt(" nhập giá trị");
+    //     total += arr [i]
+    //
+    // }
+    // alert("tổng =" + total)
+
+    //bài 3
+     let arr = [[1,8,3],[3,7,9]]
+     let max = arr [0][0]
+     let index = 0
+
+     for ( let i=0; i < arr.length; i++) {
+         for (let j = 0; j< arr.length; j ++){
+             if ( arr[i][j] > max){
+                 max = arr [i][j]
+         }
+         }
+     }
+alert(max)
+</script>
+</html>
