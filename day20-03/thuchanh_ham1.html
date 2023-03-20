@@ -8,18 +8,27 @@
 
 </body>
 <script>
-    function processConfirm(answer){
-        let result = "";
-        if (answer){
-            result = 'bắt đầu nào'}
-            else {
-                result = 'ket thuc'
-            }
+    let number = parseInt(prompt("Nhập số cần check "));
+    isPrime(number)
 
-        return result
+    function isPrime(number) {
+        let count = 0;
+
+        if (number === 0) {
+            alert(number + " không là số nguyên tố")
+        } else {
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    count += 1;
+                }
+            }
+            if (count === 2) {
+                alert(number + " là số nguyên tố")
+
+            } else {
+                alert(number + " không là số nguyên tố")
+            }
+        }
     }
-    let confirmAnswer = confirm("bạn đã sẵn sàng chưa");
-    let theAnswer = processConfirm(confirmAnswer);
-    alert(theAnswer);
 </script>
 </html>
