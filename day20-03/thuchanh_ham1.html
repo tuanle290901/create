@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function processConfirm(answer){
+        let result = "";
+        if (answer){
+            result = 'bắt đầu nào'}
+            else {
+                result = 'ket thuc'
+            }
+
+        return result
+    }
+    let confirmAnswer = confirm("bạn đã sẵn sàng chưa");
+    let theAnswer = processConfirm(confirmAnswer);
+    alert(theAnswer);
+</script>
+</html>
