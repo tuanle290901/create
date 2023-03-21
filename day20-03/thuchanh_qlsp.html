@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="show"></p>
+<script>
+    let product = [
+        ["ip13", "12000000", "USA"],
+        ["ip13pro", "20000000", "USA"],
+        ["ip13prm", "25000000", "USA"],
+    ];
+    function display(arr) {
+        let str = ""
+        for ( let i=0; i< arr.length; i++)
+            for (let j=0;j < arr[i].length ;j++){
+                str +="<p>" + arr[i][j] + " </p>";
+            }
+        document.getElementById("show").innerHTML = str ;
+
+    }
+    display(product);
+
+
+
+</script>
+
+
+</body>
+</html>

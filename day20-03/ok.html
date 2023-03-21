@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<p id="show"></p>
+<button onclick="addProd()">ADD</button>
+</body>
+<script>
+  let ip14 = ["Iphone14", 500, "CHINA"]
+  let ip15 = ["Iphone15", 600, "CHINA"]
+  let products = [ip14, ip15];
+
+  function display() {
+    let str = "<table>";
+    for (let i = 0; i < products.length; i++) {
+      str += "<tr>"
+      for (let j = 0; j < products[i].length; j++) {
+        str += "<td>" + products[i][j] + "</td>";
+      }
+      str += "<td><button onclick='editProd(" + i + ")'>Sửa</button></td>"
+      str += "<td><button onclick='dellProd(" + i + ")'>Xóa</button></td>"
+    }
+    str += "</table>"
+    document.getElementById("show").innerHTML = str;
+  }
+
+  function inputInfo() {
+    let name = prompt("Nhập tên sản phẩm: ")
+    let price = prompt("Nhập giá sản phẩm: ")
+    let from = prompt("Nhập xuất xứ sản phẩm:l ")
+    let newProd = [name, price, from];
+    return newProd;
+  }
+
+  function addProd() {
+    let newProd = inputInfo();
+    products.push(newProd);
+    display();
+  }
+
+  function editProd(index) {
+    let newProd = inputInfo();
+    products.splice(index,1,newProd);
+    display();
+  }
+  function dellProd(index) {
+    let newProd = inputInfo();
+    products.splice(index,1);
+    confirm("bạn có chắc chắn muốn xóa không")
+    display();
+  }
+  display(products);
+</script>
+</html>
